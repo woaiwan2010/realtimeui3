@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      base: '/realtimeui3/', // ✨ 关键修复：告诉 Vite 你的仓库名是 "-"
       server: {
         port: 3000,
         host: '0.0.0.0',
